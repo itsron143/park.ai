@@ -55,15 +55,15 @@ public class NewsActivity extends AppCompatActivity {
         mPeopleRVAdapter = new FirebaseRecyclerAdapter<News, NewsActivity.NewsViewHolder>(personsOptions) {
             @Override
             protected void onBindViewHolder(NewsActivity.NewsViewHolder holder, final int position, final News model) {
-                holder.setTitle(model.getTitle());
-                holder.setDesc(model.getDesc());
-                holder.setTime(model.getTime());
+                holder.setTitle(model.getName());
+                holder.setDesc(model.getAddress());
+                holder.setTime(model.getCharge());
                 holder.setImage(getBaseContext(), model.getImage());
 
                 holder.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        final String url = model.getUrl();
+                        final String url = model.getPhone();
                         Intent intent = new Intent(getApplicationContext(), NewsWebView.class);
                         intent.putExtra("id", url);
                         startActivity(intent);

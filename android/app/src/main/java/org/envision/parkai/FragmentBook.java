@@ -66,13 +66,13 @@ public class FragmentBook extends Fragment {
 
 
         //"News" here will reflect what you have called your database in Firebase.
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("News");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("host");
         mDatabase.keepSynced(true);
 
         mPeopleRV = (RecyclerView) v.findViewById(R.id.myRecycleView);
         // progressBar.setVisibility(ProgressBar.VISIBLE);
 
-        DatabaseReference personsRef = FirebaseDatabase.getInstance().getReference().child("News");
+        DatabaseReference personsRef = FirebaseDatabase.getInstance().getReference().child("host");
         Query personsQuery = personsRef.orderByKey();
 
         mPeopleRV.hasFixedSize();
@@ -86,19 +86,19 @@ public class FragmentBook extends Fragment {
 
                 progressBar.setVisibility(ProgressBar.INVISIBLE);
 
-                holder.setTitle(model.getTitle());
-                holder.setDesc(model.getDesc());
-                holder.setTime(model.getTime());
+                holder.setTitle(model.getName());
+                holder.setDesc(model.getAddress());
+                holder.setTime(model.getCharge());
                 holder.setImage(getActivity(), model.getImage());
 
                 holder.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        final String url = model.getUrl();
+                        final String url = model.getPhone();
                         final String img = model.getImage();
-                        final String title = model.getTitle();
-                        final String time = model.getTime();
-                        final String desc = model.getDesc();
+                        final String title = model.getName();
+                        final String time = model.getCharge();
+                        final String desc = model.getAddress();
 
                         Intent intent = new Intent(getActivity(), LiveTileDescription.class);
                         intent.putExtra("id", url);

@@ -58,7 +58,7 @@ dependencies {
     implementation 'com.ramotion.cardslider:card-slider:0.2.0'
     implementation 'com.github.bluejamesbond:textjustify-android:2.1.6'
     implementation 'com.squareup.picasso:picasso:2.5.2'
-    implementation 'com.google.firebase:firebase-storage:11.8.0'
+    implementation 'com.google.firebase:firebase-storage:16.1.0'
     //implementation 'com.firebaseui:firebase-ui-database:3.2.1'
     implementation 'com.firebaseui:firebase-ui-database:3.3.1'
     implementation 'org.aviran.cookiebar2:cookiebar2:1.0.9'
@@ -76,3 +76,4 @@ dependencies {
 }
 
 apply plugin: 'com.google.gms.google-services'
+com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true

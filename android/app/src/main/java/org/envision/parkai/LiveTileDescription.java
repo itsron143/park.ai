@@ -1,6 +1,7 @@
 package org.envision.parkai;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -17,6 +18,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import org.aviran.cookiebar2.CookieBar;
+
+import java.util.Locale;
 
 import static com.google.common.hash.Hashing.sha1;
 
@@ -84,7 +87,9 @@ public class LiveTileDescription extends AppCompatActivity {
 
 
 
-                mDatabase.child("booking").child(a).child("password").setValue(title);
+                mDatabase.child("currentbooking").child(title).child("userID").setValue(a);
+                mDatabase.child("currentbooking").child(title).child("timestart").setValue(0);
+                mDatabase.child("currentbooking").child(title).child("timeend").setValue(0);
 
 
 
@@ -94,6 +99,10 @@ public class LiveTileDescription extends AppCompatActivity {
                         .setDuration(5000)
                         .setBackgroundColor(R.color.green)
                         .show();
+
+                Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                        Uri.parse("http://maps.google.com/maps?saddr=12.824779,80.046642&daddr=12.8212766,80.0385479"));
+                startActivity(intent);
 
 
 
