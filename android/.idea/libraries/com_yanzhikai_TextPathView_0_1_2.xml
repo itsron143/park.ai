@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.yanzhikai:TextPathView-0.1.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/TextPathView-0.1.2.aar/d3937db75447e5ba2d7a412898234827/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/TextPathView-0.1.2.aar/d3937db75447e5ba2d7a412898234827/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yanzhikai/TextPathView/0.1.2/8069197ca2774cec18f4dab471467c4d75f0491/TextPathView-0.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

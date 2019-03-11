@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "664957964073",
+    "firebase_url": "https://parkai.firebaseio.com",
+    "project_id": "parkai",
+    "storage_bucket": "parkai.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664957964073:android:9535200ba8b39d61",
+        "android_client_info": {
+          "package_name": "org.envision.parkai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664957964073-qvp1jcj5q0293lp026uhcnhact3tbd06.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.envision.parkai",
+            "certificate_hash": "b76ca9626da59c0925ab5cc6d2af370d7dd37fd6"
+          }
+        },
+        {
+          "client_id": "664957964073-0caefc2argj27o43k5nl8vj552l5aij9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGLDzir3E1XnIw7Fxmm3qpGvQuEsq-KL0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "664957964073-0caefc2argj27o43k5nl8vj552l5aij9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
