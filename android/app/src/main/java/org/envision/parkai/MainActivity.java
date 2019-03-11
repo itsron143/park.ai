@@ -31,10 +31,10 @@ public class MainActivity extends AppCompatActivity {
                     loadHomeFragment();
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+                    loadHostFragment();
                     return true;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
+                   loadProfileFragment();
                     return true;
             }
             return false;
@@ -82,6 +82,28 @@ public class MainActivity extends AppCompatActivity {
         ft.addToBackStack(null);
         ft.commit();
     }
+
+    private void loadHostFragment() {
+        about_hack = false;
+        FragmentHost fragment = FragmentHost.newInstance();
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.fragment_frame, fragment);
+        //setTitle("Home");
+        ft.addToBackStack(null);
+        ft.commit();
+    }
+
+    private void loadProfileFragment() {
+        about_hack = false;
+        FragmentProfile fragment = FragmentProfile.newInstance();
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.fragment_frame, fragment);
+        //setTitle("Home");
+        ft.addToBackStack(null);
+        ft.commit();
+    }
+
+
 
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager

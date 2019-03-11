@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sign_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.flaviofaria.kenburnsview.KenBurnsView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/login_backdrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="12dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/space20"
+        android:paddingRight="@dimen/space20">
+
+        <TextView
+            android:id="@+id/tv_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:text="Host a Space"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space20"
+            android:orientation="vertical"
+
+            android:paddingBottom="@dimen/space5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space5"
+                android:text="FIRST NAME"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/txt10"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/collegename"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@drawable/fields_layout"
+                android:hint="Place Name"
+                android:lines="1"
+                android:paddingEnd="4dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="4dp"
+                android:paddingStart="16dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/txt_hint"
+                android:textSize="@dimen/txt16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space20"
+            android:orientation="vertical"
+
+            android:paddingBottom="@dimen/space5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space5"
+                android:text="LAST NAME"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/txt10"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/collegeid"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@drawable/fields_layout"
+                android:hint="Location"
+                android:lines="1"
+                android:paddingEnd="4dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="4dp"
+                android:paddingStart="16dp"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/txt_hint"
+                android:textSize="@dimen/txt16" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space20"
+            android:orientation="vertical"
+
+            android:paddingBottom="@dimen/space5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space5"
+                android:text="PHONE NUMBER"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/txt10"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@drawable/fields_layout"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:lines="1"
+                android:paddingEnd="4dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="4dp"
+                android:paddingStart="16dp"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/txt_hint"
+                android:textSize="@dimen/txt16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space40"
+            android:orientation="vertical"
+
+            android:paddingBottom="@dimen/space5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space5"
+                android:text="PASSWORD"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/txt10"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@drawable/fields_layout"
+                android:hint="Charge per Hour"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:paddingEnd="4dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="4dp"
+                android:paddingStart="16dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/txt_hint"
+                android:textSize="@dimen/txt16" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_sign_up"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginBottom="@dimen/space40"
+            android:background="@drawable/button_layout_white"
+            
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/txt16" />
+
+    </LinearLayout>
+</RelativeLayout>

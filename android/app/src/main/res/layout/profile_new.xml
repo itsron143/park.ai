@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:background="#fff"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:background="@drawable/button_gradient"
+        android:id="@+id/desc">
+
+        <ImageView
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:paddingRight="8px"
+            android:src="@drawable/logo"
+            android:layout_gravity="right"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_gravity="center"
+            android:layout_width="144dp"
+            android:layout_height="144dp"
+            android:src="@drawable/logo"
+            app:civ_border_width="1dp"
+            app:civ_border_color="#000"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2sp"
+            android:text="Mayank Kinger"
+            android:textColor="#FFF"
+            android:id="@+id/name"
+            android:layout_marginTop="4dp"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:gravity="center"
+           />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/password_change"
+
+                android:layout_width="0dp"
+                android:layout_marginRight="2dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/submit_background"
+                android:text="Change Password"
+                android:textColor="#169BD7"
+                />
+            <Button
+                android:id="@+id/signout"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/submit_background"
+                android:text="Sign Out"
+                android:textColor="#169BD7"
+                />
+        </LinearLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/contact_fields">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+
+                android:textSize="18sp"
+                android:id="@+id/aaruushid"
+                android:textColor="#169BD7"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

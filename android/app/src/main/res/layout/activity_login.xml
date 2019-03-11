@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:src="@drawable/login_backdrop" />
 
-    <ImageView
+   <!-- <ImageView
         android:layout_width="wrap_content"
         android:layout_height="250dp"
         android:id="@+id/logo"
@@ -19,7 +19,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="48dp"
         android:padding="@dimen/activity_horizontal_margin"
-        android:src="@drawable/aheader" />
+        android:src="@drawable/github" /> -->
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
@@ -52,5 +52,16 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="4dp"
         android:text="" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:textColor="#fff"
+        android:textSize="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sign_in_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="177dp"
+        android:text="Park.ai" />
 
 </RelativeLayout>
