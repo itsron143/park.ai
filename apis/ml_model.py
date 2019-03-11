@@ -1,27 +1,15 @@
-from openalpr import Alpr
-import sys
+import requests
+import base64
+import json
 
-# Backup Model
-alpr = Alpr("in", "openalpr.conf", "runtime_data")
-if not alpr.is_loaded():
-    print("Error loading OpenALPR")
-    sys.exit(1)
+# Sample image file is available at http://plates.openalpr.com/ea7the.jpg
+IMAGE_PATH = 'test.png'
+SECRET_KEY = 'sk_YOUWONTKNOWTHISLOL'
 
-alpr.set_top_n(20)
-alpr.set_default_region("md")
+with open(IMAGE_PATH, 'rb') as image_file:
+    img_base64 = base64.b64encode(image_file.read())
 
-results = alpr.recognize_file("plates.jpg")
+url = 'https://api.openalpr.com/v2/recognize_bytes?recognize_vehicle=1&country=us&secret_key=%s' % (SECRET_KEY)
+r = requests.post(url, data = img_base64)
 
-i = 0
-for plate in results['results']:
-    i += 1
-    print("Plate #%d" % i)
-    print("   %12s %12s" % ("Plate", "Confidence"))
-    for candidate in plate['candidates']:
-        prefix = "-"
-        if candidate['matches_template']:
-            prefix = "*"
-
-        print("  %s %12s%12f" % (prefix, candidate['plate'], candidate['confidence']))
-
-alpr.unload()
+print(json.dumps(r.json(), indent=2))
