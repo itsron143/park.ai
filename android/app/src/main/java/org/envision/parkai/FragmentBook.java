@@ -95,8 +95,17 @@ public class FragmentBook extends Fragment {
                     @Override
                     public void onClick(View v) {
                         final String url = model.getUrl();
-                        Intent intent = new Intent(getActivity(), NewsWebView.class);
+                        final String img = model.getImage();
+                        final String title = model.getTitle();
+                        final String time = model.getTime();
+                        final String desc = model.getDesc();
+
+                        Intent intent = new Intent(getActivity(), LiveTileDescription.class);
                         intent.putExtra("id", url);
+                        intent.putExtra("context", img);
+                        intent.putExtra("title", title);
+                        intent.putExtra("time", time);
+                        intent.putExtra("desc", desc);
                         startActivity(intent);
                     }
                 });

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:ext="http://schemas.android.com/apk/res-auto"
+
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+
+            android:id="@+id/img"
+            android:src="@drawable/logo"/>
+
+
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:padding="10dp"
+           android:text="Parking Space Name"
+           android:id="@+id/title"
+           android:textSize="20sp"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="Distance"
+            android:id="@+id/desc"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="Status"
+            android:id="@+id/time"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="Host Name"
+            android:id="@+id/urldetails"
+            android:textSize="18sp"/>
+
+
+        <Button
+            android:id="@+id/password_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+           android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:background="@drawable/button_gradient"
+            android:text="Book Space!"
+            android:textColor="#fff" />
+
+
+    </LinearLayout>
+</ScrollView>
