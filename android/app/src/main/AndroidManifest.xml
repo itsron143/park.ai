@@ -33,6 +33,8 @@
 
         <activity
             android:name=".LiveTileDescription" />
+        <activity
+            android:name=".LoginNumberPlate" />
     </application>
 
 </manifest>

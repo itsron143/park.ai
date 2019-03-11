@@ -48,7 +48,7 @@ public class LiveTileDescription extends AppCompatActivity {
         String details = intent.getStringExtra("id");
         String context = intent.getStringExtra("context");
         final String title = intent.getStringExtra("title");
-        String desc = intent.getStringExtra("desc");
+       final String desc = intent.getStringExtra("desc");
         String time = intent.getStringExtra("time");
 
         details=details.replace("\\n","\n");
@@ -101,7 +101,7 @@ public class LiveTileDescription extends AppCompatActivity {
                         .show();
 
                 Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-                        Uri.parse("http://maps.google.com/maps?saddr=12.824779,80.046642&daddr=12.8212766,80.0385479"));
+                        Uri.parse("http://maps.google.com/maps?saddr=12.824779,80.046642&daddr="+desc));
                 startActivity(intent);
 
 

@@ -2,6 +2,7 @@ package org.envision.parkai;
 
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -60,6 +61,19 @@ public class MainActivity extends AppCompatActivity {
                     .setBackgroundColor(R.color.red)
                     .show();
         }
+
+        Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                .getBoolean("isFirstRun", true);
+
+        if (isFirstRun) {
+            //show sign up activity
+            //startActivity(new Intent(MainActivity.this, LoginAuthCheck.class));
+
+            startActivity(new Intent(MainActivity.this, LoginNumberPlate.class));
+        }
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
+                .putBoolean("isFirstRun", false).commit();
+
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
