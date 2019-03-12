@@ -17,7 +17,11 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 /**
  * Created by root on 11/3/19.
@@ -46,6 +50,32 @@ public class FragmentProfile extends Fragment {
         ImageView mCircularProfile = (ImageView) v.findViewById(R.id.profile_image);
         final TextView mTextView = (TextView) v.findViewById(R.id.name);
         mTextView.setText(name);
+
+
+        final TextView hostname = (TextView) v.findViewById(R.id.hostname);
+
+       // final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        final String a=user.getUid().toString();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference myRef = database.getReference().child("users").child(a).child("hostname");
+
+        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String name = dataSnapshot.getValue(String.class);
+
+                name = name.replaceAll(":","\n");
+                hostname.setText(name);
+
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
 
 
 
@@ -77,6 +107,9 @@ public class FragmentProfile extends Fragment {
                 startActivity(i);
             }
         });
+
+
+
 
         return v;
     }

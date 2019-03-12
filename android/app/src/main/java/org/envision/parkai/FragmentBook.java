@@ -15,12 +15,18 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import org.aviran.cookiebar2.CookieBar;
@@ -46,6 +52,9 @@ public class FragmentBook extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.activity_news, container, false);
         getActivity().setTitle("Book your Space!");
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        final String a=user.getUid().toString();
+
 
         if(!isNetworkAvailable())
         {
@@ -82,12 +91,20 @@ public class FragmentBook extends Fragment {
 
         mPeopleRVAdapter = new FirebaseRecyclerAdapter<News, NewsActivity.NewsViewHolder>(personsOptions) {
             @Override
-            protected void onBindViewHolder(NewsActivity.NewsViewHolder holder, final int position, final News model) {
+            protected void onBindViewHolder(final NewsActivity.NewsViewHolder holder, final int position, final News model) {
 
                 progressBar.setVisibility(ProgressBar.INVISIBLE);
 
+
+
+
+
+
+
                 holder.setTitle(model.getName());
-                holder.setDesc(model.getAddress());
+               // holder.setDesc("Hosted by: \nRohan Banerjee");
+
+                holder.setDesc(model.getHostuid());
                 holder.setTime(model.getStatus());
                 holder.setImage(getActivity(), model.getImage());
 

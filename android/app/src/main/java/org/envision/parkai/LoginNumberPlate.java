@@ -73,7 +73,7 @@ public class LoginNumberPlate extends AppCompatActivity {
                 } else {
 
 
-                    LoginDetails2 details = new LoginDetails2(a,name,email,contact.getText().toString(), picURL,password.getText().toString(),collegename.getText().toString());
+                    LoginDetails2 details = new LoginDetails2("",a,name,email,contact.getText().toString(), picURL,password.getText().toString(),collegename.getText().toString());
                     mDatabase.child("users").child(a).setValue(details);
                     finish();
                     startActivity(new Intent(LoginNumberPlate.this, MainActivity.class));

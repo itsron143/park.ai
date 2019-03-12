@@ -111,7 +111,7 @@ public class LoginActivity extends AppCompatActivity {
                         //signOut();
                         CookieBar.build(LoginActivity.this)
                                 .setTitle("Welcome "+user.getDisplayName().toString()+"!")
-                                .setMessage("Enjoy Aaruush! :D")
+                                .setMessage("Enjoy Park.ai! :D")
                                 .setDuration(5000)
                                 .setBackgroundColor(R.color.green)
                                 .show();

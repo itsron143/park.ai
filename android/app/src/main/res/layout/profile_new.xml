@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -67,25 +74,33 @@
 
 
 
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#fff"
+    android:textSize="20dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="10dp"
+    android:text="Your Hosting Space :"/>
 
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerVertical="true"
-            android:background="@drawable/contact_fields">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:id="@+id/hostname"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Name"
+            android:layout_marginBottom="10dp"/>
 
 
-            <TextView
-                android:layout_width="match_parent"
-                android:gravity="center"
 
-                android:textSize="18sp"
-                android:id="@+id/aaruushid"
-                android:textColor="#169BD7"
-                android:layout_height="wrap_content" />
-        </RelativeLayout>
+
 
 
     </LinearLayout>
 </RelativeLayout>
+</ScrollView>

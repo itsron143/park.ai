@@ -24,8 +24,11 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.common.base.Charsets;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -184,6 +187,32 @@ public class FragmentHost extends Fragment {
                             .setBackgroundColor(R.color.red)
                             .show();
                 } else {
+
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    final DatabaseReference myRef = database.getReference().child("users").child(a).child("hostname");
+
+                    myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            String name = dataSnapshot.getValue(String.class);
+
+                            name=name+":"+collegename.getText().toString();
+                            mDatabase.child("users").child(a).child("hostname").setValue(name);
+
+
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
+
+
+
+
+
+
 
 
                     HostDetails details = new HostDetails(a,collegename.getText().toString(),collegeid.getText().toString(),contact.getText().toString(), password.getText().toString(),downloadurl.toString(),"Not Booked");

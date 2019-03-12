@@ -61,7 +61,7 @@ public class LiveTileDescription extends AppCompatActivity {
 
         ImageView img=(ImageView) findViewById(R.id.img);
 
-        Picasso.with(this).load(context).placeholder(R.drawable.logo).into(img);
+        Picasso.with(this).load(context).placeholder(R.drawable.park).into(img);
 
        /* GlideApp
                 .with(this)

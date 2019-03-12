@@ -6,6 +6,7 @@ package org.envision.parkai;
 
 public class LoginDetails2 {
 
+    private String hostname;
     private String uid;
     private String name;
     private String email;
@@ -15,7 +16,8 @@ public class LoginDetails2 {
     private String numberPlate;
 
 
-    public LoginDetails2(String uid, String name, String email, String phno, String img, String bank, String numberPlate) {
+    public LoginDetails2(String hostname,String uid, String name, String email, String phno, String img, String bank, String numberPlate) {
+        this.hostname=hostname;
         this.uid = uid;
         this.name = name;
         this.email = email;
@@ -28,6 +30,15 @@ public class LoginDetails2 {
     public LoginDetails2()
     {
 
+    }
+
+
+    public String getHostname() {
+        return hostname;
+    }
+
+    public void setHostname(String hostname) {
+        this.hostname = hostname;
     }
 
     public String getUid() {
