@@ -61,9 +61,27 @@
             android:id="@+id/urldetails"
             android:textSize="18sp"/>
 
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <Button
             android:id="@+id/password_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="@drawable/button_gradient"
+            android:text="Book Space!"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/password_change1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -71,10 +89,13 @@
            android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
             android:padding="10dp"
-            android:background="@drawable/button_gradient"
-            android:text="Book Space!"
-            android:textColor="#fff" />
+            android:layout_weight="1"
 
+            android:layout_gravity="center"
+            android:background="@drawable/button_gradient"
+            android:text="Navigate"
+            android:textColor="#fff" />
+    </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

@@ -123,8 +123,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
                 android:background="@drawable/fields_layout"
-                android:hint="Added Info"
-                android:inputType="phone"
+                android:hint="Landmark"
+
                 android:lines="1"
                 android:paddingEnd="4dp"
                 android:paddingLeft="16dp"
@@ -159,7 +159,7 @@
                 android:layout_height="46dp"
                 android:background="@drawable/fields_layout"
                 android:hint="Charge per Hour"
-                android:inputType="textPassword"
+
                 android:lines="1"
                 android:paddingEnd="4dp"
                 android:paddingLeft="16dp"

@@ -186,8 +186,8 @@ public class FragmentHost extends Fragment {
                 } else {
 
 
-                    HostDetails details = new HostDetails(collegename.getText().toString(),collegeid.getText().toString(),contact.getText().toString(), password.getText().toString(),downloadurl.toString());
-                    mDatabase.child("host").child(a).setValue(details);
+                    HostDetails details = new HostDetails(a,collegename.getText().toString(),collegeid.getText().toString(),contact.getText().toString(), password.getText().toString(),downloadurl.toString(),"Not Booked");
+                    mDatabase.child("host").child(collegename.getText().toString()).setValue(details);
                     getActivity().finish();
                     startActivity(new Intent(getContext(), MainActivity.class));
 

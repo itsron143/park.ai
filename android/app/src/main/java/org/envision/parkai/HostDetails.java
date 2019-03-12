@@ -6,18 +6,39 @@ package org.envision.parkai;
 
 public class HostDetails {
 
+    private String hostuid;
     private String name;
     private String address;
     private String phone;
     private String charge;
     private String image;
+    private String status;
 
-    public HostDetails(String name, String address, String phone, String charge, String image) {
+    public HostDetails(String hostuid,String name, String address, String phone, String charge, String image,String status) {
+        this.hostuid=hostuid;
         this.name = name;
         this.address = address;
         this.phone = phone;
         this.charge = charge;
         this.image = image;
+        this.status=status;
+    }
+
+
+    public String getHostuid() {
+        return hostuid;
+    }
+
+    public void setHostuid(String hostuid) {
+        this.hostuid = hostuid;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getName() {

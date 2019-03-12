@@ -55,9 +55,9 @@ public class LiveTileDescription extends AppCompatActivity {
 
 
         title1.setText(title);
-        desc1.setText(desc);
-        time1.setText(time);
-        url1.setText(details);
+        desc1.setText("Location : "+desc);
+        time1.setText("Charge per hour : "+time);
+        url1.setText("Added Info : "+details);
 
         ImageView img=(ImageView) findViewById(R.id.img);
 
@@ -79,12 +79,14 @@ public class LiveTileDescription extends AppCompatActivity {
         mDatabase.keepSynced(true);
 
         Button pc=(Button) findViewById(R.id.password_change);
+        Button pc1=(Button) findViewById(R.id.password_change1);
 
 
         pc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                mDatabase.child("host").child(title).child("status").setValue("Booked");
 
 
                 mDatabase.child("currentbooking").child(title).child("userID").setValue(a);
@@ -100,6 +102,25 @@ public class LiveTileDescription extends AppCompatActivity {
                         .setBackgroundColor(R.color.green)
                         .show();
 
+              /*  Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                        Uri.parse("http://maps.google.com/maps?saddr=12.824779,80.046642&daddr="+desc));
+                startActivity(intent);*/
+
+
+
+
+            }
+        });
+
+
+        pc1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+
+
                 Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
                         Uri.parse("http://maps.google.com/maps?saddr=12.824779,80.046642&daddr="+desc));
                 startActivity(intent);
@@ -109,6 +130,7 @@ public class LiveTileDescription extends AppCompatActivity {
 
             }
         });
+
 
 
     }

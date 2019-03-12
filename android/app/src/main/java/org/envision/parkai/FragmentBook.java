@@ -88,7 +88,7 @@ public class FragmentBook extends Fragment {
 
                 holder.setTitle(model.getName());
                 holder.setDesc(model.getAddress());
-                holder.setTime(model.getCharge());
+                holder.setTime(model.getStatus());
                 holder.setImage(getActivity(), model.getImage());
 
                 holder.mView.setOnClickListener(new View.OnClickListener() {

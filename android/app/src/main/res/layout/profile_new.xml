@@ -19,7 +19,7 @@
             android:layout_width="100px"
             android:layout_height="100px"
             android:paddingRight="8px"
-            android:src="@drawable/logo"
+
             android:layout_gravity="right"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -52,17 +52,7 @@
             android:padding="10dp">
 
 
-            <Button
-                android:layout_weight="1"
-                android:id="@+id/password_change"
 
-                android:layout_width="0dp"
-                android:layout_marginRight="2dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/submit_background"
-                android:text="Change Password"
-                android:textColor="#169BD7"
-                />
             <Button
                 android:id="@+id/signout"
                 android:layout_weight="1"
