@@ -15,3 +15,4 @@ Guess what? It removes all the above and many more!
 
 Stay tuned!
 
+Team mates - [Rohan Banerjee](https://github.com/rohanbanerjee), [Arko Chatterjee](https://github.com/arkochatterjee), [Rounak Vyas](https://github.com/itsron717)
